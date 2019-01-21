@@ -1,23 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import Vuex from 'vuex'
 
-Vue.use(Vuex)
+// 导入全局样式
+import './assets/base.css'
+// 导入路由
+import router from './lib/router'
+
+// 导入仓库
+import store from './lib/store'
+
+
 Vue.config.productionTip = false
-
-const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment (state) {
-      state.count++
-    }
-  }
-})
 
 new Vue({
   render: h => h(App),
-  store
+  // 挂载到Vue实例上 把仓库
+  store,
+  router
 }).$mount('#app')
