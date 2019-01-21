@@ -3,7 +3,7 @@
     <h2 class='title'>黑马买买买-商城
       <p>
         <router-link to="/index" >主页</router-link>
-        <router-link to='/cart' >购物车</router-link>
+        <router-link to='/cart' >购物车<span>({{$store.getters.totalNum}})</span></router-link>
       </p>
     </h2>
     <router-view></router-view>
